@@ -1,16 +1,16 @@
 body{
     background-color: rgba(255, 245, 232, 0.425);
     color:rgb(141, 0, 24);
-    font-family: "Satisfy", cursive;
+    font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
 
 }
 
 #header {
-    font-size: 50px;
-    
-}
+    font-size: 60px;
+    font-family: "Satisfy", cursive;
+    }
 
 #button {
     background-color: rgba(240, 230, 217, 0.425);

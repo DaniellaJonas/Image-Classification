@@ -2,7 +2,6 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import numpy as np
 import matplotlib.pyplot as plt 
-
 from flask import Flask, render_template
 
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')

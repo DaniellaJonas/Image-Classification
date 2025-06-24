@@ -7,7 +7,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 
 model = tf.keras.models.Sequential([
     tf.keras.layers.Rescaling(1./255, input_shape=(1200, 1800, 3)),
-    tf.keras.layers.Conv2D((3,3),32, activation="relu"),
+    tf.keras.layers.Conv2D(32, (3,3), activation="relu"),
     tf.keras.layers.MaxPooling2D(),
     tf.keras.layers.Flatten(),
     tf.keras.layers.Dense(32, activation='relu'),

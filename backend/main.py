@@ -36,3 +36,19 @@ dataset = image_dataset_from_directory(
     shuffle=True,
     seed=123,
 )
+
+
+def image_prep(img_path):
+    img = Image.open(img_path).resize((1800, 1200)) #מעלה תמונה ומסדר את הגודל
+    img = np.array(img) / 255.0 #הופכים את התמונה למערך מספרים
+    img = np.expand_dims(img, axis=0) #מגדיר שיש קבוצה אחת עם תמונה אחת בפנים
+    return img
+
+
+image = image_prep("my_image.jpg")
+prediction = model.predict(image)
+
+if prediction[0][0] > 0.5:
+    print("It's a drawing")
+else:
+    print("It's a painting!")

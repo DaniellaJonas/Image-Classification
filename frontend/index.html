@@ -15,10 +15,10 @@
         <h1 id="header">Image Classification</h1>
         <h3 id="sub">An AI based site to determine whether your image is a photographed picture or drawing</h3>
         <br>
-        <button id="button" alt="Add Image" onclick="upload()">Upload Image</button>
-        <input type="file" id="fileInput" style="display: none;" />
+        <button id="button" onclick="upload()">Upload Image</button>
+        <input type="file" id="fileInput" style="display: none;" onchange="img_load(event)"/>
         <br><br>
-        <img id="preview" src="" alt="Image preview" style="display: none; width: 180px; height:120px;">
+        <img id="preview" src="" alt="Image preview" style="display: none; width: 180px; height: 120px;">
 
 
     </center>

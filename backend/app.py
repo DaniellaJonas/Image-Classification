@@ -1,18 +1,19 @@
 from flask import Flask, request
 from flask_cors import CORS
-from main import image_prep, model
+from main import image_prep, model 
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  
 
+# יצירת תיקיית העלאות אם לא קיימת
 os.makedirs("uploads", exist_ok=True)
 
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
         return "No file part", 400
-    
+
     file = request.files['file']
     if file.filename == '':
         return "No selected file", 400

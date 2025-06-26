@@ -13,8 +13,8 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Conv2D(32, (3,3), activation="relu"),
     tf.keras.layers.MaxPooling2D(),
     tf.keras.layers.Flatten(),
-    tf.keras.layers.Dense(32, activation='relu'),
-    tf.keras.layers.Dense(1, activation='sigmoid')
+    tf.keras.layers.Dense(32, activation="relu"),
+    tf.keras.layers.Dense(1, activation="sigmoid")
 
 ])
 

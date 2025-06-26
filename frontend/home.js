@@ -20,7 +20,7 @@ function img_load(event) {
         img.style.display = "block";
     };
 
-     const formData = new FormData();
+    const formData = new FormData();
     formData.append("file", file);
 
     fetch("http://10.0.0.15:5000/predict", {

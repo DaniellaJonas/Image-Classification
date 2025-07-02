@@ -14,29 +14,31 @@ function img_load(event) {
   img.src = URL.createObjectURL(file);
   img.style.display = "block";
 
-    img.onload = () => {
-        URL.revokeObjectURL(img.src);
-        img.style.display = "block";
-    };
+  img.onload = () => {
+    URL.revokeObjectURL(img.src);
+    img.style.display = "block";
+  };
 
-    const formData = new FormData();
-    formData.append("file", file);
+  const formData = new FormData();
+  formData.append("file", file);
 
-    fetch("http://localhost:5000/predict", { 
-        method: "POST",
-        body: formData
-    })
+  fetch("http://localhost:5000/predict", {
+    method: "POST",
+    body: formData
+  })
     .then(response => {
-        if (!response.ok) {
-            throw new Error("HTTP status " + response.status);
-        }
-        return response.text();
+      if (!response.ok) {
+        throw new Error("HTTP status " + response.status);
+      }
+      return response.json();
     })
     .then(data => {
-        alert("Prediction: " + data);
+      const resultDiv = document.getElementById("result");
+      resultDiv.textContent = "Prediction: " + data.result;
     })
     .catch(error => {
-        console.error("Error:", error);
-        alert("Something went wrong: " + error.message);
+      console.error("Error:", error);
+      const resultDiv = document.getElementById("result");
+      resultDiv.textContent = "Something went wrong: " + error.message;
     });
 }

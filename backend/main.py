@@ -1,6 +1,6 @@
-import numpy as np
 from tensorflow.keras.models import load_model as keras_load_model
 from PIL import Image
+import numpy as np
 
 def load_model():
     return keras_load_model("model.keras")

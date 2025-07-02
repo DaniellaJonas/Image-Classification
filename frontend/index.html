@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Satisfy&display=swap" rel="stylesheet">
-    <title>Image Classification</title>
-    <link rel="stylesheet" href="home.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="home.css" />
+  <title>Image Classification</title>
 </head>
 <body>
-    <center>
-        <h1 id="header">Image Classification</h1>
-        <h3 id="sub">An AI based site to determine whether your image is a photographed picture or drawing</h3>
-        <br>
-        <button id="button" onclick="upload()">Upload Image</button>
-        <input type="file" id="fileInput" style="display: none;" onchange="img_load(event)"/>
-        <br><br>
-        <img id="preview" src="" alt="Image preview" style="display: none; width: 180px; height: 120px;">
+  <center>
+    <h1 id="header">Image Classification</h1>
+    <h3 id="sub">An AI based site to determine whether your image is a photographed picture or drawing</h3>
+    <br>
+    <button id="button" onclick="upload()">Upload Image</button>
+    <input type="file" id="fileInput" style="display: none;" onchange="img_load(event)" />
+    <br><br>
+    <img id="preview" src="" alt="Image preview" style="display: none; width: 180px; height: 120px;">
+    <br>
+    <div id="result" style="font-size: 22px; margin-top: 20px; color: rgb(141, 0, 24); font-weight: bold;"></div>
+  </center>
 
-
-    </center>
-    <script src="home.js" defer></script>
-
+  <script src="home.js" defer></script>
 </body>
 </html>

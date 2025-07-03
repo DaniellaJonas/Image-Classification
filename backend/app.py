@@ -30,7 +30,7 @@ def predict():
 
     print("Prediction value:", prediction[0][0])
 
-    label = "Drawing" if prediction[0][0] > 0.5 else "Photograph"
+    label = "Drawing" if prediction[0][0] < 0.07741286 else "Photograph"
     return jsonify({'result': label})
 
 if __name__ == "__main__":

@@ -3,14 +3,13 @@ from tensorflow.keras import layers, models
 from tensorflow.keras.applications import MobileNetV2
 import os
 
-# הגדרות
 BATCH_SIZE = 10
 IMG_SIZE = (180, 120)  # height, width
 EPOCHS_INITIAL = 10
 EPOCHS_FINETUNE = 10
 FINE_TUNE_AT = 100 
 
-print("🔄 Loading dataset...")
+print("Loading dataset...")
 
 train_dataset = tf.keras.utils.image_dataset_from_directory(
     "dataset",
@@ -58,9 +57,9 @@ model = models.Sequential([
 ])
 
 model.compile(
-    optimizer='adam',
-    loss='binary_crossentropy',
-    metrics=['accuracy']
+    optimizer="adam",
+    loss="binary_crossentropy",
+    metrics=["accuracy"]
 )
 
 print("Starting initial training...")
